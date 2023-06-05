@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Musicswopshop</title>
+    <meta name="title" content="Musicswopshop">
+
+    <!-- <link rel="stylesheet" href="./assets/css/reset.css"> -->
+    <!-- font and icon css -->
+    <link rel="stylesheet" href="./assets/css/iconfont.css">
+
+    <link rel="stylesheet" href="./assets/css/index.css">
+</head>
+
+<body>
+    <div class="bg">
+        <!-- header -->
+        <div class="header">
+            <div class="wrap header-box">
+                <div class="logo" onclick="redirect('index.html')"></div>
+                <div class="search">
+                    <div class="search-m">
+                        <div class="search_logo"></div>
+                        <div class="form">
+                            <input type="text" class="keyword" placeholder="Guitar">
+                            <button class="iconfont" onclick="redirect('searchPage.html')">&#xe60c;</button>
+                        </div>
+                        <div class="shop-cart iconfont">&#xe655;</div>
+                        <div class="personal iconfont">&#xe61d;</div>
+                        <div class="enquries iconfont">&#xe88f;</div>
+                        <div class="about iconfont">&#xe72d;</div>
+                    </div>
+                </div>
+                <div class="promotion-icon iconfont">&#xe607;</div>
+                <div class="promotion">New Customer pomotion: The first order get 20% off, 7 days free return</div>
+            </div>
+        </div>
+        <div class="banner">
+            <span></span>
+            <div class="category iconfont">
+                <span class="iconfont">&#xe80f;</span>
+                Project Category &#xf02a9;
+            </div>
+            <div class="newArr iconfont">
+                <span class="iconfont">&#xe6e0;</span>New Arrivals &#xf02a9;
+            </div>
+            <div class="sale iconfont">
+                <span class="iconfont">&#xe60e;</span>Sale &#xf02a9;
+            </div>
+            <div class="repair iconfont">
+                <span class="iconfont">&#xe635;</span>Repair &#xf02a9;
+            </div>
+            <span></span>
+        </div>
+        <div class="search-bar">
+            <!-- <div class="search-detail"> Search > Guitar</div> -->
+            <div class="search-detail"></div>
+        </div>
+        <div class="recomment">
+            <div class="iconfont">
+                Not sure what're you looking for? See what we've found for you here! &#xe60d;
+            </div>
+            <div></div>
+        </div>
+        <div class="showcase">
+            <div>
+                <img src="assets/images/FenderF35.png" alt="FenderF35">
+                <span>Fender - F - 35</span>
+                <br>
+                <span>AUD 599</span>
+            </div>
+            <div>
+                <img src="assets/images/Fender57.png" alt="Fender57">
+                <span>Fender - Stratocaster Custom Shop' 57</span>
+                <br>
+                <span>AUD 3599</span>
+            </div>
+            <div>
+                <img src="assets/images/L400P.png" alt="L400P">
+                <span>Greco - PXB - L400 Phoenix</span>
+                <br>
+                <span>AUD 799</span>
+            </div>
+        </div>
+        <div id="bottomLeftDiv">
+            <div class="live-chat iconfont">&#xe660;</div>
+        </div>
+    </div>
+
+    <script>
+        window.addEventListener('DOMContentLoaded', function () {
+            // The DOMContentLoaded event fires when the HTML document has been completely parsed
+            var LBdiv = document.getElementById('bottomLeftDiv');
+            updatePosition();
+
+            window.addEventListener('resize', function () {
+                updatePosition();
+            });
+
+            function updatePosition() {
+                var windowHeight = window.innerHeight;
+                var LBdivHeight = LBdiv.offsetHeight;
+                var bottom = windowHeight - LBdivHeight;
+                LBdiv.style.top = bottom + 'px';
+            }
+        });
+
+        function redirect(page) {
+            window.location.href = "./" + page;
+        };
+    </script>
+</body>
+
+</html>

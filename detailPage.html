@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail</title>
+    <!-- font and icon css -->
+    <link rel="stylesheet" href="./assets/css/iconfont.css">
+
+    <link rel="stylesheet" href="./assets/css/index.css">
+</head>
+
+<body class="plain-page">
+    <div class="header">
+        <div class="wrap header-box">
+            <div class="logo" onclick="redirect('index.html')"></div>
+            <div class="search">
+                <div class="search-m">
+                    <div class="search_logo"></div>
+                    <div class="form">
+                        <input type="text" class="keyword" placeholder="Guitar">
+                        <button class="iconfont">&#xe60c;</button>
+                    </div>
+                    <div class="shop-cart iconfont">&#xe655;</div>
+                    <div class="personal iconfont">&#xe61d;</div>
+                    <div class="enquries iconfont">&#xe88f;</div>
+                    <div class="about iconfont">&#xe72d;</div>
+                </div>
+            </div>
+            <div class="promotion-icon iconfont">&#xe607;</div>
+            <div class="promotion">New Customer pomotion: The first order get 20% off, 7 days free return</div>
+        </div>
+    </div>
+    <div class="banner">
+        <span></span>
+        <div class="category iconfont">
+            <span class="iconfont">&#xe80f;</span>
+            Project Category &#xf02a9;
+        </div>
+        <div class="newArr iconfont">
+            <span class="iconfont">&#xe6e0;</span>New Arrivals &#xf02a9;
+        </div>
+        <div class="sale iconfont">
+            <span class="iconfont">&#xe60e;</span>Sale &#xf02a9;
+        </div>
+        <div class="repair iconfont">
+            <span class="iconfont">&#xe635;</span>Repair &#xf02a9;
+        </div>
+        <span></span>
+    </div>
+    <div class="search-bar">
+        <div class="search-detail"> Search > Guitar > Fender - F - 35</div>
+        <!-- <div class="search-detail"></div> -->
+    </div>
+
+    <div class="detail">
+        <div>
+            <img src="assets/images/FenderF35.png" alt="FenderF35">
+        </div>
+        <div>
+            <span style="font-size: 50px; color: #0250B9; font-weight: 700; margin-bottom: 1vw;">AUD 599</span>
+            <span style="font-size: 40px; color: #000; font-weight: 600; margin-bottom: 1vw;">Fender - F - 35</span>
+            <span style="font-size: 30px; color: #8d8d8d; font-weight: 400; margin-bottom: 1vw;">MSS 90233</span>
+            <div id="QAmessage">
+                <span class="iconfont">&#xe626; In stock (4) </span>
+                <span class="iconfont">&#xe61a; Free Shipping </span>
+                <span class="iconfont">&#xe648; Easy Return </span>
+                <span class="iconfont">&#xe671; 1 Year Warranty </span>
+            </div>
+            <div style="margin-top: 1vw;">
+                <label for="quantity" style="font-size: 25px;">Quantity:</label>
+                <br>
+                <select name="quantity" id="quantity" style="width: 112px;
+                height: 48px; font-size: 20px;">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select>
+                <div>
+                    <button id="add-to-cart-btn" onclick="redirect('cart.html')">Add to Cart</button>
+                    <br>
+                    <button id="check-out-btn">Check Out</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div id="bottomLeftDiv">
+        <div class="live-chat iconfont">&#xe660;</div>
+    </div>
+
+    <script>
+        window.addEventListener('DOMContentLoaded', function () {
+            // The DOMContentLoaded event fires when the HTML document has been completely parsed
+            var LBdiv = document.getElementById('bottomLeftDiv');
+            updatePosition();
+
+            window.addEventListener('resize', function () {
+                updatePosition();
+            });
+
+            function updatePosition() {
+                var windowHeight = window.innerHeight;
+                var LBdivHeight = LBdiv.offsetHeight;
+                var bottom = windowHeight - LBdivHeight;
+                LBdiv.style.top = bottom + 'px';
+            }
+        });
+
+        function redirect(page) {
+            window.location.href = "./" + page;
+        };
+    </script>
+</body>
+
+</html>

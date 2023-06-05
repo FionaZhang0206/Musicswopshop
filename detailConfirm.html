@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Confirmation</title>
+
+    <!-- font and icon css -->
+    <link rel="stylesheet" href="./assets/css/iconfont.css">
+
+    <link rel="stylesheet" href="./assets/css/index.css">
+    <link rel="stylesheet" href="./assets/css/payment.css">
+</head>
+
+<body class="plain-page">
+    <div class="header">
+        <div class="wrap header-box">
+            <div class="logo" onclick="redirect('index.html')"></div>
+            <div class="search">
+                <div class="search-m">
+                    <div class="search_logo"></div>
+                    <div class="form">
+                        <input type="text" class="keyword" placeholder="Guitar">
+                        <button class="iconfont">&#xe60c;</button>
+                    </div>
+                    <div class="shop-cart iconfont">&#xe655;</div>
+                    <div class="personal iconfont">&#xe61d;</div>
+                    <div class="enquries iconfont">&#xe88f;</div>
+                    <div class="about iconfont">&#xe72d;</div>
+                </div>
+            </div>
+            <div class="promotion-icon iconfont">&#xe607;</div>
+            <div class="promotion">New Customer pomotion: The first order get 20% off, 7 days free return</div>
+        </div>
+    </div>
+    <div class="banner">
+        <span></span>
+        <div class="category iconfont">
+            <span class="iconfont">&#xe80f;</span>
+            Project Category &#xf02a9;
+        </div>
+        <div class="newArr iconfont">
+            <span class="iconfont">&#xe6e0;</span>New Arrivals &#xf02a9;
+        </div>
+        <div class="sale iconfont">
+            <span class="iconfont">&#xe60e;</span>Sale &#xf02a9;
+        </div>
+        <div class="repair iconfont">
+            <span class="iconfont">&#xe635;</span>Repair &#xf02a9;
+        </div>
+        <span></span>
+    </div>
+    <div class="paymentFlow">
+        <div id="shopping-cart">Shopping Cart</div>
+        <div id="arrow">>></div>
+        <div id="detail-info" style="background-color: #1480BA;">Detail Confirmation</div>
+        <div id="arrow">>></div>
+        <div id="payment-opt">Payment Options</div>
+    </div>
+    <div class="log-in">
+        <span>Existing Customers?</span>
+        <input type="text" style="font-size: 20px; width: 320px; height: 50px; background-color: #E9F0F4;"
+            placeholder="Email/Phone/Username">
+        <input type="password" style="font-size: 20px;width: 320px; height: 50px; background-color: #E9F0F4;"
+            placeholder="Password">
+        <button id="log-in-btn" style="left: 15vw;">Log in</button>
+    </div>
+    <div id="check-out-bg" style="display: flex; flex-direction: column;">
+        <div style="padding: 30px; font-size: 38px; font-weight: 700;">
+            New Customer & Guests Check Out
+        </div>
+        <div
+            style="height: 50px; line-height: 50px; background-color: #1480BA; font-size: 25px; font-weight: 700; text-align: center;">
+            Address & Contact Details
+        </div>
+        <div id="personal-info" style="background-color: #EAEDF2;">
+            <div style="margin: 30px; font-size: 18px; font-weight: 700;">
+                Email Address: <input type="text" style="width: 400px;">
+            </div>
+            <div style="margin: 30px; font-size: 18px; font-weight: 700;">
+                Name: <input type="text" style="width: 80px;" placeholder="First Name"><input type="text"
+                    style="width: 80px;" placeholder="Last Name">
+            </div>
+            <div style="margin: 30px; font-size: 18px; font-weight: 700;">
+                Phone: <input type="text" style="width: 30px;" placeholder="+1"><input type="text"
+                    style="width: 200px;">
+            </div>
+            <div style="margin: 30px; font-size: 18px; font-weight: 700;">
+                Delivery Address: <input type="text" style="width: 400px;" placeholder="Address Details"><input
+                    type="text" style="width: 80px;" placeholder="Postcode"><input type="text" style="width: 80px;"
+                    placeholder="City"><input type="text" style="width: 80px;" placeholder="Country">
+
+            </div>
+            <div style="margin: 30px; font-size: 18px; font-weight: 700;">
+                Billing Address: <input type="text" style="width: 400px;" placeholder="Address Details"><input
+                    type="text" style="width: 80px;" placeholder="Postcode"><input type="text" style="width: 80px;"
+                    placeholder="City"><input type="text" style="width: 80px;" placeholder="Country">
+                <div>
+                    <button id="check-out-btn" style="float: right; right: 200px;"
+                        onclick="redirect('payment.html')">Continue</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        function redirect(page) {
+            window.location.href = "./" + page;
+        };
+    </script>
+</body>
+
+</html>

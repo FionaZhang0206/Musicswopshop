@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+
+    <!-- font and icon css -->
+    <link rel="stylesheet" href="./assets/css/iconfont.css">
+
+    <link rel="stylesheet" href="./assets/css/index.css">
+    <link rel="stylesheet" href="./assets/css/payment.css">
+</head>
+
+<body class="plain-page">
+    <div class="header">
+        <div class="wrap header-box">
+            <div class="logo" onclick="redirect('index.html')"></div>
+            <div class="search">
+                <div class="search-m">
+                    <div class="search_logo"></div>
+                    <div class="form">
+                        <input type="text" class="keyword" placeholder="Guitar">
+                        <button class="iconfont">&#xe60c;</button>
+                    </div>
+                    <div class="shop-cart iconfont">&#xe655;</div>
+                    <div class="personal iconfont">&#xe61d;</div>
+                    <div class="enquries iconfont">&#xe88f;</div>
+                    <div class="about iconfont">&#xe72d;</div>
+                </div>
+            </div>
+            <div class="promotion-icon iconfont">&#xe607;</div>
+            <div class="promotion">New Customer pomotion: The first order get 20% off, 7 days free return</div>
+        </div>
+    </div>
+    <div class="banner">
+        <span></span>
+        <div class="category iconfont">
+            <span class="iconfont">&#xe80f;</span>
+            Project Category &#xf02a9;
+        </div>
+        <div class="newArr iconfont">
+            <span class="iconfont">&#xe6e0;</span>New Arrivals &#xf02a9;
+        </div>
+        <div class="sale iconfont">
+            <span class="iconfont">&#xe60e;</span>Sale &#xf02a9;
+        </div>
+        <div class="repair iconfont">
+            <span class="iconfont">&#xe635;</span>Repair &#xf02a9;
+        </div>
+        <span></span>
+    </div>
+    <div class="paymentFlow">
+        <div id="shopping-cart" style="background-color: #1480BA;">Shopping Cart</div>
+        <div id="arrow">>></div>
+        <div id="detail-info">Detail Confirmation</div>
+        <div id="arrow">>></div>
+        <div id="payment-opt">Payment Options</div>
+    </div>
+    <div id="check-out-bg">
+        <div>
+            <img src="assets/images/FenderF35.png" alt=""
+                style=" width: 300px; margin: 20px;position: relative; left: 80px;">
+        </div>
+        <div style="display: flex; flex-direction: column; position: relative;left: 10vw;top: 5vw;">
+            <span style="font-size: 40px; color: #000; font-weight: 600;">Fender - F - 35</span>
+            <span style="font-size: 30px; color: #8d8d8d; font-weight: 400;">MSS 90233</span>
+            <span style="font-size: 50px; color: #0250B9; font-weight: 700;position: relative; top: 3vw;">AUD 599</span>
+        </div>
+        <div id="sum-info" style="height: 250px; display: flex; flex-direction: row;">
+            <div style="display: flex; flex-direction: column; position: relative; left: 5vw;">
+                <span style="font-size: 20px; text-align: center; margin-top: 20px;">Qty</span>
+                <select name="quantity" id="quantity" style="width: 112px;
+                height: 48px; font-size: 20px; margin-top: 8vw;">
+                    <option value="1">1</option>
+                    <option value="2" selected>2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select>
+            </div>
+            <div style=" display: flex;flex-direction: column; position: relative; left: 12vw;">
+                <span style="font-size: 20px; text-align: center; margin-top: 20px;">Total (Inc.GST)</span>
+                <span style="font-size: 20px; text-align: center;margin-top: 8vw;">$ 1198.0</span>
+            </div>
+        </div>
+        <button id="check-out-btn" style="top: 350px;right: 50px;"
+            onclick="redirect('detailConfirm.html')">Continue</button>
+    </div>
+
+    <script>
+        function redirect(page) {
+            window.location.href = "./" + page;
+        };
+    </script>
+</body>
+
+</html>
